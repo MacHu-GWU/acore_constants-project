@@ -1,13 +1,18 @@
 # -*- coding: utf-8 -*-
 
-from acore_constants import api
+import os
+import pytest
 
 
 def test():
-    _ = api
+    from acore_constants import api
+
+    _ = api.TagKey
+    _ = api.TagKey.SERVER_ID
+    _ = api.TagKey.WOW_STATUS_MEASURE_TIME_TAG_KEY
+    _ = api.TagKey.WOW_STATUS_TAG_KEY
 
 
 if __name__ == "__main__":
-    from acore_constants.tests import run_cov_test
-
-    run_cov_test(__file__, "acore_constants.api", preview=False)
+    basename = os.path.basename(__file__)
+    pytest.main([basename, "-s", "--tb=native"])
