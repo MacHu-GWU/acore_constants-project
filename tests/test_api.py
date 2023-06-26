@@ -9,8 +9,8 @@ def test():
 
     _ = api.TagKey
     _ = api.TagKey.SERVER_ID
-    _ = api.TagKey.WOW_STATUS_MEASURE_TIME_TAG_KEY
-    _ = api.TagKey.WOW_STATUS_TAG_KEY
+    _ = api.TagKey.WOW_STATUS
+    _ = api.TagKey.WOW_STATUS_MEASURE_TIME
 
 
 if __name__ == "__main__":

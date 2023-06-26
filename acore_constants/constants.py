@@ -14,5 +14,5 @@ class TagKey:
     """
 
     SERVER_ID = "wserver:server_id"
-    WOW_STATUS_MEASURE_TIME_TAG_KEY = "wserver:wow_status_measure_time"
-    WOW_STATUS_TAG_KEY = "wserver:wow_status"
+    WOW_STATUS = "wserver:wow_status"
+    WOW_STATUS_MEASURE_TIME = "wserver:wow_status_measure_time"
