@@ -52,6 +52,8 @@ Welcome to ``acore_constants`` Documentation
 ==============================================================================
 由于 acore 项目过于复杂, 它由有非常多个开源子项目. 虽然这些项目之间已经尽量解耦了并且尽量保持互相独立, 不过他们之间总是需要引用一些常量. 所以我们单独开了一个项目来管理这些常量, 以供在其他项目中引用. 避免了这些子项目之间互相引用的麻烦.
 
+所有常量的列表以及详细描述请参考 `constants.py <https://github.com/MacHu-GWU/acore_constants-project/blob/main/acore_constants/constants.py>`_.
+
 
 .. _install:
 
