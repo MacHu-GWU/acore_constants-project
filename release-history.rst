@@ -15,6 +15,19 @@ x.y.z (Backlog)
 **Miscellaneous**
 
 
+0.2.1 (2023-06-26)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+**Features and Improvements**
+
+- Add the following constant:
+    - ``acore_constants.api.TagKey.SERVER_LIFECYCLE = "wserver:server_lifecycle"``
+    - ``acore_constants.api.ServerLifeCycle``
+    - ``acore_constants.api.ServerLifeCycle.running = "running"``
+    - ``acore_constants.api.ServerLifeCycle.smart_running = "smart_running"``
+    - ``acore_constants.api.ServerLifeCycle.stopped = "stopped"``
+    - ``acore_constants.api.ServerLifeCycle.deleted = "deleted"``
+
+
 0.1.2 (2023-06-26)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 **Bugfixes**
