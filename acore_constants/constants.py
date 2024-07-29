@@ -18,12 +18,37 @@ class TagKey:
         的格式也很重要, 他会被其他项目的代码解析.
     :param WOW_STATUS_MEASURE_TIME: 这个 tag 用来记录 WOW_STATUS 的测量时间. 值为
         ISO 格式的 datetime.
+
+    以下 tag key 用于在 EC2 的 AWS Tag 上标注 worldserver 当前的状况.
+
+    :param WORLDSERVER_MEASURE_TIME:
+    :param WORLDSERVER_IS_RDS_EXISTS:
+    :param WORLDSERVER_IS_RDS_RUNNING:
+    :param WORLDSERVER_RDS_STATUS:
+    :param WORLDSERVER_CONNECTED_PLAYERS:
+    :param WORLDSERVER_CHARACTERS_IN_WORLD:
+    :param WORLDSERVER_SERVER_UPTIME:
+    :param WORLDSERVER_CPU_USAGE:
+    :param WORLDSERVER_MEMORY_USAGE:
+    :param WORLDSERVER_TOTAL_MEMORY:
+    :param WORLDSERVER_AVAILABLE_MEMORY:
     """
 
     SERVER_ID = "wserver:server_id"
     SERVER_LIFECYCLE = "wserver:server_lifecycle"
     WOW_STATUS = "wserver:wow_status"
     WOW_STATUS_MEASURE_TIME = "wserver:wow_status_measure_time"
+    WORLDSERVER_MEASURE_TIME = "wserver:worldserver_measure_time"
+    WORLDSERVER_IS_RDS_EXISTS = "wserver:worldserver_is_rds_exists"
+    WORLDSERVER_IS_RDS_RUNNING = "wserver:worldserver_is_rds_running"
+    WORLDSERVER_RDS_STATUS = "wserver:worldserver_rds_status"
+    WORLDSERVER_CONNECTED_PLAYERS = "wserver:worldserver_connected_players"
+    WORLDSERVER_CHARACTERS_IN_WORLD = "wserver:worldserver_characters_in_world"
+    WORLDSERVER_SERVER_UPTIME = "wserver:worldserver_server_uptime"
+    WORLDSERVER_CPU_USAGE = "wserver:worldserver_cpu_usage"
+    WORLDSERVER_MEMORY_USAGE = "wserver:worldserver_memory_usage"
+    WORLDSERVER_TOTAL_MEMORY = "wserver:worldserver_total_memory"
+    WORLDSERVER_AVAILABLE_MEMORY = "wserver:worldserver_available_memory"
 
 
 class ServerLifeCycle:
@@ -32,7 +57,7 @@ class ServerLifeCycle:
     每隔一段时间就检查一次服务器的状态, 将它们保持在指定的 LifeCycle 状态.
 
     - running: 永远保持运行状态.
-    - smart_running: 智能运行状态, 如果服务器内的玩家持续 4 小时为 0, 那么就会关闭服务器.
+    - smart_running: 智能运行状态, 如果服务器内的玩家数持续几个小时为 0, 那么就会关闭服务器.
         又或是 EC2 和 DB 只有一个在运行的状态, 说明服务器不完整, 我们也将其关闭.
     - stopped: 保持服务器关闭状态.
     - deleted: 将服务器的 EC2 和 RDS 删除, 删除 RDS 之前创建一个 (AWS managed) 备份.
